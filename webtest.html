@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>img load test</title>
+</head>
+<body>
+
+<script>
+var img = document.querySelector('#image-1234');
+var counter = 0
+  img.onload = function loaded() {
+    counter++;
+    if(counter == 0)
+    {
+      document.body.style.backgroundColor = "red";
+
+    };
+    if(counter == 1)
+    {
+      document.body.style.backgroundColor = "green";
+
+    };
+    if(counter == 2)
+    {
+      document.body.style.backgroundColor = "blue";
+
+    };
+  };
+
+  img.src = "img.jpg";
+
+  img.src = "img.jpg";
+</script>
+
+</body>
+</html>
