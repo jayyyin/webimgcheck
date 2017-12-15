@@ -6,12 +6,13 @@
 <body>
 
 
-<img src="https://github.com/jayyyin/webimgcheck/blob/master/img.jpg" onload="loaded()">
+<img id="img"><img>
+<button id='ReloadButton'>reload</button>
   
 <script>
-var img = document.querySelector('https://github.com/jayyyin/webimgcheck/blob/master/img.jpg');
+var img = document.querySelector('img');
 var counter = 0
-  function loaded() {
+  img.load = function loaded() {
     counter++;
     if(counter == 0)
     {
@@ -31,8 +32,15 @@ var counter = 0
   };
 
   img.src = "https://github.com/jayyyin/webimgcheck/blob/master/img.jpg";
+  
+  ReloadButton.onclick = function ()
+  {
+    img.src = "https://github.com/jayyyin/webimgcheck/blob/master/img.jpg";
 
-  img.src = "https://github.com/jayyyin/webimgcheck/blob/master/img.jpg";
+  }
+
+
+  
 </script>
 </body>
 </html>
