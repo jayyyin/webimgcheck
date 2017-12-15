@@ -7,14 +7,13 @@
 
 
 <img id="img"><img>
-<button id='ReloadButton'>reload</button>
+<button id='ReloadButton' onclick="button()">reload</button>
   
 <script>
 var img = document.querySelector('#img');
 var counter = 0;
   img.load = function loaded() {
     counter++;
-    document.body.style.backgroundColor = "red";
     if(counter == 0)
     {
       document.body.style.backgroundColor = "red";
@@ -34,7 +33,7 @@ var counter = 0;
 
   img.src = "img.jpg";
   
-  ReloadButton.onclick = function ()
+  function button()
   {
     img.src = "img.jpg";
 
